@@ -14,7 +14,17 @@ export class AppController {
   exampleRenderEjs(@Res() res) {
     return res.render('example', {
             title: 'Example',
-            body: 'This is an example body content'
+            main: 'This is an example body content',
+            FooterJs: ""
+     });
+  }
+
+  @Get('/example-layout-auth')
+  exampleLayoutAuthRenderEjs(@Res() res) {
+    return res.render('example', {
+            title: 'Example',
+            main: 'This is an example body content',
+            layout: 'layouts/layout-auth'
      });
   }
 }
